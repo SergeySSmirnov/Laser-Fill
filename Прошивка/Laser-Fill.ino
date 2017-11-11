@@ -79,7 +79,6 @@ int MENU_CONFIG_VALUES[MENU_STEP_COUNT];
 #define LIGHT_TIME_SCALE  1000UL
 
 
-
 /**
  * Экземпляр класса для работы с энкодером.
  */
@@ -161,6 +160,7 @@ void loop() {
 
 		// TODO: Здесь необходимо выполнять работу лазера по засветке, причем жеательно, чтобы засветка одного кадра осуществлялась в течение MENU_CONFIG_VALUES[LASER_SPEED].
 		for(int i = 40; i <= 255; i = i+140) {
+			// TODO: analogWrite заменить на более быстрые решения.
 			analogWrite(PIN_X_COORD, i);
 			analogWrite(PIN_Y_COORD, j);
 			j = j + 4;
