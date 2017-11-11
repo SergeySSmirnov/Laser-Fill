@@ -157,6 +157,8 @@ void loop() {
 			lcdPrintVal((end_time - time) / LIGHT_TIME_SCALE);
 
 
+		// BUG: Из-за введения delay() тормозит обратный отсчет.
+
 
 		// TODO: Здесь необходимо выполнять работу лазера по засветке, причем жеательно, чтобы засветка одного кадра осуществлялась в течение MENU_CONFIG_VALUES[LASER_SPEED].
 		for(int i = 40; i <= 255; i = i+140) {
